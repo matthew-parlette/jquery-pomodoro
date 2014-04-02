@@ -54,7 +54,7 @@
         $(document).trigger('pomodoro.initialize');
         
         $('body').append($.pomodoro.settings.html);
-        $('.cancel-pomodoro').live('click', function() {
+        $(document).on('click', '.cancel-pomodoro', function() {
             if ($.pomodoro.running) $.pomodoro.cancel();
             return false;
         });
